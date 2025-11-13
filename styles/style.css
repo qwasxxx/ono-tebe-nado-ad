@@ -1,1 +1,356 @@
-/* место для вашего кода */
+/* Шапка сайта с навигацией и контактами */
+.header {
+  display: grid;
+  grid-template-columns: 3.9fr 0.9fr 3.9fr;
+  margin: 92px 50px 96px;
+}
+
+/* Основной список ссылок */
+.header__links-list,
+.header__links-list-main {
+  display: flex;
+  align-items: center;
+}
+
+/* Расположение элементов в основном списке */
+.header__links-list-main {
+  gap: 32px;
+}
+
+/* Убрать маркеры списка */
+.header__links-list-item,
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+
+/* Стили для ссылок */
+.header__link,
+.header__link_active {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Подчеркивание для обычных ссылок */
+.header__link {
+  border-bottom: 1px solid black;
+}
+
+/* Логотип в шапке */
+.header__logo {
+  width: 138px;
+  height: 105px;
+  display: grid;
+  align-content: start;
+}
+
+/* Блок с адресом и контактами */
+.header__address {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+/* Контактная информация */
+.contacts-element {
+  width: 240px;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.6px;
+  color: #000;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Ссылки на почту и телефон */
+.mail-address,
+.phone-address {
+  text-decoration: none;
+  border-bottom: 0.5px solid black;
+}
+
+/* Основной баннер с фоном */
+.cover {
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Затемнение фона */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовок на баннере */
+.cover__title {
+  padding-top: 165px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 19px;
+  text-transform: uppercase;
+  grid-template-areas:
+    "start start start"
+    "center center center"
+    "end end end ";
+}
+
+/* Стили для текста заголовка */
+.aligned-text,
+.aligned-text_center,
+.aligned-text_right {
+  font-family: Raleway, sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 30px;
+  color: #fff;
+}
+
+/* Выравнивание текста */
+.aligned-text {
+  line-height: 115%;
+  margin: 0 50px;
+  grid-area: start;
+}
+
+.aligned-text_center {
+  line-height: 100%;
+  margin: 0 95px 0 65px;
+  text-align: center;
+  grid-area: center;
+}
+
+.aligned-text_right {
+  line-height: 70px;
+  margin: 0 50px;
+  text-align: end;
+  grid-area: end;
+}
+
+/* Уменьшенный межбуквенный интервал */
+.new-letter-spacing {
+  letter-spacing: 60px;
+}
+
+/* Описание под заголовком */
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  margin: 105px 50px 0;
+  padding-bottom: 50px;
+}
+
+/* Текст и кнопка в описании */
+.cover__description-text,
+.bet-button {
+  font-family: Raleway, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.cover__description-text {
+  padding-left: 372px;
+  display: flex;
+  align-items: center;
+  word-spacing: 17px;
+}
+
+/* Кнопка ставки */
+.bet-button {
+  padding: 12px 32px;
+  border: 1px solid #ffffff;
+  background: none;
+}
+
+/* Секция с карточками товаров */
+.lots {
+  margin: 180px 50px 0;
+}
+
+/* Заголовок секции */
+.lots__heading {
+  margin: 0 0 27px 40px;
+  font-family: Raleway, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* Список карточек */
+.lots__card-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Ссылка на карточку */
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* Общие стили карточки */
+.card {
+  width: 430px;
+  min-height: 450px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Фоновые изображения карточек */
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+  background-size: cover;
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+  background-size: cover;
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+  background-size: cover;
+}
+
+/* Заголовок карточки */
+.card__title {
+  font-family: Raleway, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* Текст карточки */
+.card__text {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #fff;
+}
+
+/* Ссылка "Посмотреть больше" */
+.lots__look-more-link {
+  margin: 30px 0 0 40px;
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Секция "О нас" */
+.about {
+  margin: 180px 50px 184px;
+}
+
+/* Двухколоночная структура */
+.about__column {
+  display: grid;
+  grid-template-columns: 430px 1fr;
+}
+
+/* Круглый логотип */
+.about__logo {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #000;
+  display: flex;
+  justify-self: center;
+}
+
+/* Изображение логотипа */
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+  margin-left: 46px;
+  align-self: center;
+}
+
+/* Текстовая часть секции */
+.about__title-and-text-wrapper {
+  margin: 101px 0 0 25px;
+  display: grid;
+  row-gap: 30px;
+}
+
+/* Заголовок секции */
+.about__title {
+  margin-bottom: 70px;
+  font-family: Raleway, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* Текст секции */
+.about__text {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #000;
+}
+
+/* Подвал сайта */
+footer {
+  margin: 0 50px 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Меню в подвале */
+.footer__menu {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+}
+
+/* Список меню */
+.footer__menu-list {
+  list-style-type: none;
+}
+
+/* Ссылки меню */
+.footer__menu-link {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+}
+
+/* Активная ссылка меню */
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+/* Социальные сети */
+.footer__social-list {
+  display: flex;
+  gap: 48px;
+  list-style-type: none;
+}
+
+/* Иконки социальных сетей */
+.footer__social-list-item-logo {
+  width: 48px;
+}
